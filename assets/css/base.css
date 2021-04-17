@@ -2,7 +2,8 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
-    --primary-color: rgb(238, 77, 45);
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -75,4 +76,34 @@ p {
     position: relative;
     z-index: 1;
     border-radius: 5px;
+}
+
+
+/* button style */
+
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn--disable {
+    cursor: default;
+    color: #999;
+    background-color: #c3c3c3;
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
