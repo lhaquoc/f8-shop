@@ -40,7 +40,7 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -70,6 +70,10 @@
 }
 
 .header__navbar-user-item {}
+
+.header__navbar-user-item--seperate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
 
 .header__navbar-user-item a {
     display: block;
@@ -101,7 +105,7 @@
 .header__navbar-item-link,
 .header__navbar-link {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 300;
     color: var(--white-color);
     text-decoration: none;
@@ -145,9 +149,17 @@
     text-decoration: none;
 }
 
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 4spx;
+}
+
 .header__navbar-icon {
     font-size: 1.8rem;
     margin: 0 8px;
+}
+
+.header__navbar-icon:hover {
+    opacity: 0.8;
 }
 
 .header__navbar-title--no-pointer {
@@ -212,10 +224,11 @@
     background-color: var(--white-color);
     right: 0;
     top: 118%;
-    border: 1px solid #d3d3d3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: default;
+    border-radius: 2px;
     /* doi goc toa do cua hieu ung scale */
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: opacity, transform;
     display: none;
