@@ -117,6 +117,7 @@ p {
     height: 34px;
     text-decoration: none;
     border: none;
+    outline: none;
     border-radius: 2px;
     font-size: 1.5rem;
     padding: 0 12px;
@@ -125,7 +126,7 @@ p {
     justify-content: center;
     align-items: center;
     line-height: 1.6rem;
-    background-color: var(--white-color);
+    color: var(--text-color);
 }
 
 .btn.btn--normal:hover {
@@ -147,4 +148,68 @@ p {
 .btn.btn--primary {
     color: var(--white-color);
     background-color: var(--primary-color);
+}
+
+
+/* Selection */
+
+.select-input {
+    height: 34px;
+    min-width: 200px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 34px;
+    left: 0;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    color: #949494;
+    font-size: 1.2rem;
+    position: relative;
+    top: 1px;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    list-style: none;
+    padding: 8px 16px;
+    display: none;
+}
+
+.select-input__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+    padding: 5px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
 }
